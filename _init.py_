@@ -1,0 +1,22 @@
+from shared.payment_summary import summarize_payments
+from shared.output_writer import save_output
+from shared.doc_generator import generate_monthly_reports
+
+def main():
+    input_file = "transactions.xlsx"   # Change this to your input file name
+    template_file = "template.docx"    # Your Word template filename
+
+    # Step 1: Read and summarize
+    summary_df = summarize_payments(input_file)
+    print("Summary data calculated.")
+
+    # Step 2: Save summary back to file with same format
+    save_output(summary_df, input_file)
+    print("Summary data saved to output file.")
+
+    # Step 3: Generate monthly Word reports
+    generate_monthly_reports(summary_df, template_file)
+    print("Monthly Word reports generated.")
+
+if __name__ == "__main__":
+    main()
