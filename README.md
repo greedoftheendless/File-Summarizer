@@ -1,4 +1,4 @@
-File Summarizer — Streamlit Transaction Report Tool
+**File Summarizer — Streamlit Transaction Report Tool**
 
 A user-friendly Streamlit web app to upload transaction data CSV files, filter and summarize them by customizable date ranges and timeframes (daily, weekly, monthly, yearly), and generate downloadable CSV reports with success/failure statistics. Designed for quick insights into payment processing data.
 Features
